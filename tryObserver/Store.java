@@ -12,9 +12,9 @@ public class Store extends Subject {
 		this.discount = discount;
 	}
 
-	void register(Observer newObserverList) {
-		observerList.add(newObserverList);
-		System.out.println("Added Customer " + newObserverList + " to Store " + store_name);
+	void register(Observer newObserver) {
+		observerList.add(newObserver);
+		System.out.println("Added Customer " + newObserver + " to Store " + store_name);
 	}
 
 	void unregister(Observer removeObserver) {

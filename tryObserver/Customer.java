@@ -1,22 +1,22 @@
 package tryObserver;
 
 public class Customer extends Observer {
-	String subsciber_name;
-	Subject store;
+	String subscriber_name;
+	Subject store_name;
 	float discount;
 
-	public Customer(Subject store, String subsciber_name) {
-		this.subsciber_name = subsciber_name;
-		this.store = store;
-		this.store.register(this);
+	public Customer(Subject store_name, String subscriber_name) {
+		this.subscriber_name = subscriber_name;
+		this.store_name = store_name;
+		this.store_name.register(this);
 	}
 
 	void update(float discount) {
 		this.discount = discount;
-		System.out.println(subsciber_name + ",you get a discount of " + this.discount + "%");
+		System.out.println(subscriber_name + ",you get a discount of " + this.discount + "%");
 	}
 
 	public String toString() {
-		return subsciber_name;
+		return subscriber_name;
 	}
 }
