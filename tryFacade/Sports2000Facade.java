@@ -6,7 +6,7 @@ public class Sports2000Facade {
 
   public Sports2000Facade(boolean flag, float amount) {
     itemPuchasedObject = new ItemPurchased();
-    sprorts2000ProcessSalesObject = new Sport2000ProcessSales(flag, amount, itemPuchasedObject.getTypeCount());
+    sprorts2000ProcessSalesObject = new Sport2000ProcessSales(flag, amount, itemPuchasedObject.returnDifferentNumberOfItemsPurchased());
   }
 
   void displayItems() {
