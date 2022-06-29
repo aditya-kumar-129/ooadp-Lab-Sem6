@@ -1,7 +1,9 @@
 package tryAdapter;
+
 public class MauriTaxAdapter implements CalcTax {
-  MauriTax mt = new MauriTax();
+  MauriTax mauriTaxObject = new MauriTax();
+
   public float taxAmount(int qty, float price) {
-    return mt.mauriTaxAmount(qty, price);
+    return mauriTaxObject.mauriTaxAmount(qty, price);
   }
 }
