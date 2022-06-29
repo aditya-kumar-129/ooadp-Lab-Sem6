@@ -1,26 +1,27 @@
 package tryBridge;
 
 public abstract class Customer {
-	String name;
-	int age;
-	Discount d;
-	String typeOfCust;
-	public Customer(String name, int age, Discount d) {
-		this.name = name;
-		this.age = age;
-		this.d = d;
+	String customer_name;
+	int customer_age;
+	Discount discountObject;
+	String typeOfCustomer;
+
+	public Customer(String customer_name, int customer_age, Discount discountObject) {
+		this.customer_name = customer_name;
+		this.customer_age = customer_age;
+		this.discountObject = discountObject;
 	}
 
-	void setDiscount(Discount d) {
-		this.d = d;
+	void setDiscount(Discount discountObject) {
+		this.discountObject = discountObject;
 	}
 
-	void showBill(float amt) {
-		System.out.println("\nName: " + name);
-		System.out.println("Age: " + age);
-		System.out.println("Type of Customer: " + typeOfCust);
-		System.out.println("Gross Cost: " + amt);
-		System.out.println("Discount: " + d.getDiscount(amt));
-		System.out.println("Payable Amount: " + (amt - d.getDiscount(amt)));
+	void showBill(float amount) {
+		System.out.println("\nName: " + customer_name);
+		System.out.println("Age: " + customer_age);
+		System.out.println("Type of Customer: " + typeOfCustomer);
+		System.out.println("Gross Cost: " + amount);
+		System.out.println("Discount: " + discountObject.getDiscount(amount));
+		System.out.println("Payable Amount: " + (amount - discountObject.getDiscount(amount)));
 	}
 }
