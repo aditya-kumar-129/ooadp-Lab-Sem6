@@ -2,16 +2,25 @@ package tryDecorator;
 
 public class Main {
 	public static void main(String[] args) {
-		DecathlonPOS in_sp = new IndoorSports();
-		DecathlonPOS ot_sp = new OutdoorSports();
-		in_sp = new GamesOnTable(in_sp, "Billiards");
-		in_sp = new BoardGames(in_sp, "Carrom");
-		in_sp = new CourtGames(in_sp, "Kabaddi");
-		in_sp = new CourtGames(in_sp, "Badminton");
-		System.out.println(in_sp.getCurrentStock());
-		ot_sp = new AdventureGames(ot_sp, "para-gliding");
-		ot_sp = new Athletics(ot_sp, "high-jump");
-		ot_sp = new StadiumGames(ot_sp, "cricket");
-		System.out.println(ot_sp.getCurrentStock());
+		//Assuming stock of each sport is 2
+		Sports sp1=new IndoorSports();
+		System.out.println("Total Indoor Sports Stock:"+sp1.getCurrentStock());
+		sp1=new Billiards(sp1);
+		System.out.println("Total Indoor Sports Stock:"+sp1.getCurrentStock());
+		sp1=new Carrom(sp1);
+		System.out.println("Total Indoor Sports Stock:"+sp1.getCurrentStock());
+		sp1=new Badminton(sp1);
+		System.out.println("Total Indoor Sports Stock:"+sp1.getCurrentStock());
+		
+		Sports sp2=new OutdoorSports();
+		System.out.println("\nTotal Outdoor Sports Stock:"+sp2.getCurrentStock());
+		sp2=new Trekking(sp2);
+		System.out.println("Total Outdoor Sports Stock:"+sp2.getCurrentStock());
+		sp2=new Cricket(sp2);
+		System.out.println("Total Outdoor Sports Stock:"+sp2.getCurrentStock());
+		sp2=new HighJump(sp2);
+		System.out.println("Total Outdoor Sports Stock:"+sp2.getCurrentStock());
+		sp2=new LongJump(sp2);
+		System.out.println("Total Outdoor Sports Stock:"+sp2.getCurrentStock());
 	}
 }

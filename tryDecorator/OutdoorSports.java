@@ -1,7 +1,8 @@
 package tryDecorator;
 
-public class OutdoorSports extends DecathlonPOS {
-	public String getCurrentStock() {
-		return "OutdoorSports \n";
+public class OutdoorSports extends Sports{
+	public OutdoorSports() {};
+	public int getCurrentStock() {
+		return 0;
 	}
 }
