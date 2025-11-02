@@ -3,7 +3,7 @@ package tryFacade;
 import java.util.*;
 
 public class ItemPurchased {
-  HashMap<String, Integer> hm = new HashMap<String, Integer>();;
+  HashMap<String, Integer> hm = new HashMap<>();;
   Scanner sc = new Scanner(System.in);
   int NoOfDifferentItems;
 
