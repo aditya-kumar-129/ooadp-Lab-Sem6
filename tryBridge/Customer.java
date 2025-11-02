@@ -17,11 +17,7 @@ public abstract class Customer {
 	}
 
 	void showBill(float amount) {
-		System.out.println("\nName: " + customer_name);
-		System.out.println("Age: " + customer_age);
-		System.out.println("Type of Customer: " + typeOfCustomer);
-		System.out.println("Gross Cost: " + amount);
-		System.out.println("Discount: " + discountObject.getDiscount(amount));
-		System.out.println("Payable Amount: " + (amount - discountObject.getDiscount(amount)));
+		System.out.println("\nName: " + customer_name + " Age: " + customer_age + " Type of Customer: " + typeOfCustomer);
+		System.out.println("Gross Cost: " + amount + " Discount: " + discountObject.getDiscount(amount) + " Payable Amount: " + (amount - discountObject.getDiscount(amount)));
 	}
 }
